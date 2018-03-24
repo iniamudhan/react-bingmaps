@@ -1,6 +1,6 @@
 {
   "name": "react-bingmaps",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "main": "lib/index.js",
   "dependencies": {
