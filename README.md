@@ -6,6 +6,16 @@ The main purpose of this version is to help you to write Bingmaps in React appli
 1. **Simply** deploy with React components
 1. **Lightweight**  depending on Bing Maps V8 Web Control
 
+## Features
+* Bingmaps in React.js
+* Multiple Pushpin
+* Multiple Infoboxe
+* Multiple Pushpin with Infoboxe
+* Callback events in Pushpins and Infoboxes
+* Map types
+* Disable Street View
+* Zoom
+
 ## Installation
 
 ### npm
