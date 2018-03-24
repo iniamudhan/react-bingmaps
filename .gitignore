@@ -20,5 +20,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/lib
-/example
+lib
+public
+src/App.css
+src/App.js
+src/App.test.css
+src/index.css
+src/index.js
