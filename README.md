@@ -46,7 +46,7 @@ Follow [Bing Maps Dev Center](http://https://www.bingmapsportal.com/) to get you
 </ReactBingmaps>
 ```
 
-![Alt text](/iniamudhan/react-bingmaps/blob/master/src/example/PinPointWithInfobox.png?raw=true "PinPointWithInfobox")
+![Alt text](/src/example/PinPointWithInfobox.png?raw=true "PinPointWithInfobox")
 
 ## Other props
 ##### mapTypeId : string
