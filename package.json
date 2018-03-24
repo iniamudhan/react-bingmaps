@@ -1,8 +1,18 @@
 {
   "name": "react-bingmaps",
+  "description": "Bingmaps in React.js",
   "version": "3.0.0",
   "private": true,
+  "author": "Iniamudhan Baskar",
+  "keywords": [
+    "Bingmaps",
+    "React.js Bingmaps"
+  ],
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iniamudhan/react-bingmaps.git"
+  },
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
