@@ -2,11 +2,15 @@
   "name": "react-bingmaps",
   "description": "Bingmaps in React.js",
   "version": "3.0.0",
-  "private": true,
+  "private": false,
   "author": "Iniamudhan Baskar",
   "keywords": [
     "Bingmaps",
-    "React.js Bingmaps"
+    "React.js Bingmaps",
+    "Bingmaps",
+    "bing",
+    "maps",
+    "Microsoft Bingmaps React.js"
   ],
   "main": "lib/index.js",
   "repository": {
