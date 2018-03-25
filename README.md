@@ -9,8 +9,8 @@ The main purpose of this version is to help you to write Bingmaps in React appli
 ## Features
 * Bingmaps in React.js
 * Multiple Pushpin
-* Multiple Infoboxe
-* Multiple Pushpin with Infoboxe
+* Multiple Infobox
+* Multiple Pushpin with Infobox
 * Callback events in Pushpins and Infoboxes
 * Map types
 * Disable Street View

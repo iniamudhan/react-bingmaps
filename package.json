@@ -1,6 +1,6 @@
 {
   "name": "react-bingmaps",
-  "description": "Bingmaps in React.js",
+  "description": "Bingmaps in React.js. React.js component for Bingmaps.",
   "version": "3.1.1",
   "private": false,
   "author": "Iniamudhan Baskar",
