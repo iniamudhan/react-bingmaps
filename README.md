@@ -28,6 +28,13 @@ NPM is the easiest and fastest way to get started using React-Bingmaps.
 $ npm i react-bingmaps
 ```
 
+### Import Module
+To use react-bootstrap-table in your react app, you should import it first. You can do by
+
+```jsx
+import { ReactBingmaps } from 'react-bingmaps';
+```
+
 ## Examples
 #### Bingmaps
 Follow [Bing Maps Dev Center](http://https://www.bingmapsportal.com/) to get your Bingmaps key 
