@@ -58,7 +58,7 @@ Follow [Bing Maps Dev Center](http://https://www.bingmapsportal.com/) to get you
 ## Other props
 ##### mapTypeId : string
 ```jsx
-mapTypeId: {"road"}
+mapTypeId = {"road"}
 ```
 Find more map types - [MapTypeId Enumeration](https://msdn.microsoft.com/en-us/library/mt712700.aspx)
 
