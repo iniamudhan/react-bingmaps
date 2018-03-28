@@ -4,12 +4,13 @@ import './App.css';
 class App extends Component {
    constructor(props) {
     super(props);
+    this.AddPushPinOnClick=this.AddPushPinOnClick.bind(this);
     this.state = {
         BingMapKey: "YourBingmapsKey",
         center: [13.0827, 80.2707],
         zoom: 7,
         pushPins:[
-              {"location":[13.0827, 80.2707]}
+              
             ],
         infoboxes:[
               {"location":[13.0827, 80.2707], "option":{ title: 'Chennai', description: '...' }, "addHandler": {"type" : "click", callback: this.OnCallBackTest, callbackData: "info"  }},
@@ -28,6 +29,13 @@ class App extends Component {
   }
   OnCallBackTest(data){
     alert(data);
+  }
+  AddPushPinOnClick(location){
+    let pushPins = this.state.pushPins.slice(0);
+    pushPins.push({"location":[location.latitude,location.longitude]})
+    this.setState({
+      pushPins:pushPins 
+    });
   }
   btnClick(e){
     e.preventDefault();
@@ -65,14 +73,15 @@ class App extends Component {
           mapTypeId = {"road"}
           navigationBarMode = {"compact"}
           supportedMapTypes = {["road","canvasDark"]}
-          // pushPins = {
-          //   this.state.pushPins
-          // }
+          pushPins = {
+            this.state.pushPins
+          }
           // infoboxes = {
           //   this.state.infoboxes
           // }
-            infoboxesWithPushPins = {this.state.infoboxesWithPushPins}
+          //infoboxesWithPushPins = {this.state.infoboxesWithPushPins}
           //disableStreetside = {false}
+          getLocation = {{addHandler: "mouseover", callback:this.AddPushPinOnClick}}
           >
         </ReactBingmaps>
       </div>

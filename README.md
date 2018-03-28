@@ -140,6 +140,22 @@ infoboxesWithPushPins = {[
           }
 ```
 
+#### getLocation : objects
+```jsx
+infoboxesWithPushPins = getLocation = {
+  {addHandler: "click", callback:this.AddPushPinOnClick}
+}
+```
+Callback Method
+```jsx
+AddPushPinOnClick(location){
+  //Outputs latitude and longitude
+  ...
+}
+```
+
+
+
 
 ## Contribution
 
