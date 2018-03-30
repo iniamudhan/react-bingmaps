@@ -15,6 +15,7 @@ The main purpose of this version is to help you to write Bingmaps in React appli
 * Map types
 * Disable Street View
 * Zoom
+* Get Location on Mouse Events
 
 ## Installation
 
@@ -142,7 +143,7 @@ infoboxesWithPushPins = {[
 
 #### getLocation : objects
 ```jsx
-infoboxesWithPushPins = getLocation = {
+getLocation = {
   {addHandler: "click", callback:this.AddPushPinOnClick}
 }
 ```
