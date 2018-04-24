@@ -14,6 +14,15 @@ class App extends Component {
               {"location":[13.0827, 80.2707]}
             ]
           }
+          regularPolygons = {
+            [
+              {
+                "center":[13.0827, 80.2707],
+                "radius":5,
+                "points":3
+              }
+            ]
+          }
           >
         </ReactBingmaps>
       </div>

@@ -38,7 +38,7 @@ import { ReactBingmaps } from 'react-bingmaps';
 
 ## Examples
 #### Bingmaps
-Follow [Bing Maps Dev Center](http://https://www.bingmapsportal.com/) to get your Bingmaps key 
+Follow [Bing Maps Dev Center](https://www.bingmapsportal.com/) to get your Bingmaps key 
 ```jsx
 <ReactBingmaps 
   bingmapKey = "[YourBingMapsKey]" > 
@@ -75,12 +75,6 @@ supportedMapTypes = {["road","canvasDark"]}
 ```
 Find more Supported Map Types Mode - [MapTypeId Enumeration](https://msdn.microsoft.com/en-us/library/mt712700.aspx)
 
-#### supportedMapTypes : string[]
-```jsx
-supportedMapTypes = {["road","canvasDark"]}
-```
-Find more Supported Map Types Mode - [MapTypeId Enumeration](https://msdn.microsoft.com/en-us/library/mt712700.aspx)
-
 #### heading : oneOfType([ string, number ])  
 **Note:** Available only for map mode - **BirdView** 
 ```jsx
@@ -99,11 +93,13 @@ disableStreetside={true}
 ```jsx
 pushPins = {
             [
-              {"location":[13.0827, 80.2707], "option":{ color: 'red' }, "addHandler": {"type" : "click", callback: this.callBackMethod }}
-            ],
-          [
-          ...
-          ]
+              {
+                "location":[13.0827, 80.2707], "option":{ color: 'red' }, "addHandler": {"type" : "click", callback: this.callBackMethod }
+              },
+              {
+                ...
+              }
+            ]
           }
 ```
 Find more **option** values - [Pushpin](https://msdn.microsoft.com/en-us/library/mt712679.aspx)
@@ -113,12 +109,13 @@ addHandler types - ["click", "mousedown", "mouseout", "mouseup", "mouseover"]
 ```jsx
 infoboxes = {
             [
-              {"location":[13.0827, 80.2707], "option":{ title: 'Chennai', description: '...' }, "addHandler": {"type" : "click", callback: this.callBackMethod }
+              {
+                "location":[13.0827, 80.2707], "option":{ title: 'Chennai', description: '...' }, "addHandler": {"type" : "click", callback: this.callBackMethod}
+              },
+              {
+                ...
               }
-            ],
-          [
-          ...
-          ]
+            ]
           }
 ```
 Find more **option** values - [Infobox](https://msdn.microsoft.com/en-us/library/mt750270.aspx)
@@ -133,10 +130,10 @@ infoboxesWithPushPins = {[
               "pushPinOption":{ title: 'Pushpin Title', description: 'Pushpin' },
               "infoboxAddHandler": {"type" : "click", callback: this.callBackMethod },
               "pushPinAddHandler": {"type" : "click", callback: this.callBackMethod }
+            },
+            {
+              ...
             }
-          ],
-          [
-          ...
           ]
           }
 ```
@@ -156,7 +153,22 @@ AddPushPinOnClick(location){
 ```
 
 
-
+#### regularPolygons : ArrayOf(objects)
+```jsx
+regularPolygons = {
+            [
+              {
+                "center":[13.0827, 80.2707],
+                "radius":5,
+                "points":3,
+                "option": {fillColor: "green", strokeThickness: 2}
+              },
+              {
+                ...
+              }
+            ]
+```
+Find more **option** values - [PolygonOptions](https://msdn.microsoft.com/en-us/library/mt712648.aspx)
 
 ## Contribution
 
