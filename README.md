@@ -102,7 +102,7 @@ pushPins = {
             ]
           }
 ```
-Find more **option** values - [Pushpin](https://msdn.microsoft.com/en-us/library/mt712679.aspx)
+Find more **option** values - [Pushpin](https://msdn.microsoft.com/en-us/library/mt712679.aspx)  
 addHandler types - ["click", "mousedown", "mouseout", "mouseup", "mouseover"]
 
 #### infoboxes : ArrayOf(objects)
@@ -118,7 +118,7 @@ infoboxes = {
             ]
           }
 ```
-Find more **option** values - [Infobox](https://msdn.microsoft.com/en-us/library/mt750270.aspx)
+Find more **option** values - [Infobox](https://msdn.microsoft.com/en-us/library/mt750270.aspx)  
 addHandler types - ["click", "mouseenter", "mouseleave"]
 #### infoboxesWithPushPins : ArrayOf(objects)
 ```jsx
