@@ -2,3 +2,23 @@
 	height: 350px;
 	width: 50%;
 }
+
+.map-one{
+	border: 1px solid black;
+	width: 47%;
+	float: left;
+	height: 500px;
+	padding: 10px;
+	margin: 5px;
+}
+.map-two{
+	border: 1px solid black;
+	width: 47%;
+	float: right;
+	height: 500px;
+	padding: 10px;
+	margin: 5px;
+}
+.customClass{
+	height: 96%;
+}

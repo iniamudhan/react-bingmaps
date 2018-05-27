@@ -36,7 +36,8 @@ To use react-bingmaps in your react app, you should import it first.
 import { ReactBingmaps } from 'react-bingmaps';
 ```
 
-## Examples
+## Examples  
+[Click here](https://iniamudhan.github.io/react-bingmaps/)
 #### Bingmaps
 Follow [Bing Maps Dev Center](https://www.bingmapsportal.com/) to get your Bingmaps key 
 ```jsx
@@ -169,6 +170,40 @@ regularPolygons = {
             ]
 ```
 Find more **option** values - [PolygonOptions](https://msdn.microsoft.com/en-us/library/mt712648.aspx)
+
+#### boundary : object
+```jsx
+//Static array of locations
+boundary = {
+              {
+                "location":['chennai'],
+                "option":{
+                  entityType: 'PopulatedPlace'
+                },
+                "polygonStyle" :{
+                  fillColor: 'rgba(161,224,255,0.4)',
+                  strokeColor: '#a495b2',
+                  strokeThickness: 2
+                }
+              }
+            }
+
+//Search by string
+boundary = {
+              {
+                "search":"India",
+                "option":{
+                  entityType: 'PopulatedPlace'
+                },
+                "polygonStyle" :{
+                  fillColor: 'rgba(161,224,255,0.4)',
+                  strokeColor: '#a495b2',
+                  strokeThickness: 2
+                }
+              }
+            }
+```
+Find more **option** values - [Get Boundary Options](https://msdn.microsoft.com/en-us/library/mt712819.aspx)
 
 ## Contribution
 
