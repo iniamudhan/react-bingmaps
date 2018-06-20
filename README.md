@@ -16,6 +16,10 @@ The main purpose of this version is to help you to write Bingmaps in React appli
 * Disable Street View
 * Zoom
 * Get Location on Mouse Events
+* Regular Polygon
+* Boundary
+* Polyline
+* Directions
 
 ## Installation
 
@@ -204,6 +208,13 @@ boundary = {
             }
 ```
 Find more **option** values - [Get Boundary Options](https://msdn.microsoft.com/en-us/library/mt712819.aspx)
+
+
+
+## Donation
+If you think that any information you obtained here is worth of some money and are willing to pay for it, feel free to send any amount through paypal.
+
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVCBMXBZ36B5S)
 
 ## Contribution
 

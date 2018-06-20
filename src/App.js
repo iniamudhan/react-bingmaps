@@ -47,7 +47,24 @@ class App extends Component {
           strokeThickness: 2
         }
       },
-      searchInput: ""
+      searchInput: "",
+      getLocationHandledData: "",
+      polyline: {
+        "location": [[13.0827, 80.2707],[13.0827, 80.1907]],
+        "option": { strokeColor: 'blue', strokeThickness: 10, strokeDashArray: [1, 2, 5, 10] }
+      },
+      directions: {
+        "renderOptions": {"itineraryContainer": "itineraryContainer" },
+        "requestOptions": {"routeMode": "driving", "maxRoutes": 2},
+        "wayPoints": [
+              {
+                address: 'Chennai, Tamilnadu'
+              },
+              {
+                address: 'Salem, Tamilnadu'
+              }
+            ]
+      }
     }
   }
   changeState(){
@@ -93,6 +110,26 @@ class App extends Component {
         "option":{
           entityType: 'PopulatedPlace'
         }
+      },
+      polyline: {
+        "location": [[13.0827, 80.2707],[13.0527, 80.2707]],
+        "option": { strokeColor: 'red', strokeThickness: 10, strokeDashArray: [1, 2, 5, 10] }
+      },
+      directions: {
+        "inputPanel": "inputPanel",
+        "renderOptions": {"itineraryContainer": "itineraryContainer" },
+        "requestOptions": {"routeMode": "driving", "maxRoutes": 2},
+        "wayPoints": [
+              {
+                address: 'Chennai, Tamilnadu'
+              },
+              {
+                address: 'Salem, Tamilnadu'
+              },
+              {
+                address: 'Coimbatore, Tamilnadu'
+              }
+            ]
       }
     })
   }
@@ -113,6 +150,11 @@ class App extends Component {
       })
     }
     event.preventDefault();
+  }
+  GetLocationHandled(location){
+    this.setState({
+      getLocationHandledData: JSON.stringify(location)
+    });
   }
   render() {
     return (
@@ -198,8 +240,72 @@ class App extends Component {
             > 
             </ReactBingmaps>
           </div>
+          <div className = "map-one">
+          <u>Bingmaps with Get Location - <span>{this.state.getLocationHandledData}</span></u>
+            <ReactBingmaps
+              id = "seven" 
+              className = "customClass"
+              bingmapKey = {this.state.bingmapKey}
+              getLocation = {
+                {addHandler: "click", callback:this.GetLocationHandled.bind(this)}
+              }
+            > 
+            </ReactBingmaps>
+          </div>
+          <div className = "map-two">
+          <u>Bingmaps with mapOptions - 'maxZoom': 12, 'minZoom': 5 </u>
+            <ReactBingmaps
+              className = "customClass"
+              id = "eight" 
+              bingmapKey = {this.state.bingmapKey}
+              mapOptions = { {'maxZoom': 12, 'minZoom': 5} }
+            > 
+            </ReactBingmaps>
+          </div>
+          <div className = "map-one">
+          <u>Bingmaps with Polyline</u>
+            <ReactBingmaps
+              id = "nine" 
+              className = "customClass"
+              bingmapKey = {this.state.bingmapKey}
+              polyline = {this.state.polyline}
+            > 
+            </ReactBingmaps>
+          </div><div className = "map-two">
+          <u>Bingmaps with mapOptions - 'maxZoom': 12, 'minZoom': 5 </u>
+            <ReactBingmaps
+              className = "customClass"
+              id = "ten" 
+              bingmapKey = {this.state.bingmapKey}
+              mapOptions = { {'maxZoom': 12, 'minZoom': 5} }
+            > 
+            </ReactBingmaps>
+          </div>
+          <div className = "map-three">
+          <u>Bingmaps with Directions</u>
+            <ReactBingmaps
+              className = "customClass"
+              id = "eleven" 
+              bingmapKey = {this.state.bingmapKey}
+              directions = {this.state.directions}
+            > 
+            </ReactBingmaps>
+            <div className="direction-container">
+              <div className="input-panel" id='inputPanel'></div>
+              <div className="itinerary-container" id='itineraryContainer'></div>
+            </div>
+          </div>
         </div>)}
+        <br />
         <h3>For new feature to be added, open new issue <a href="https://github.com/iniamudhan/react-bingmaps/issues/new">here</a>. Thanks</h3>
+        <h4>Support and donate for React-Bingmaps.</h4>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" >
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="hosted_button_id" value="RVCBMXBZ36B5S" />
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!" />
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+
       </div>
     );
   }

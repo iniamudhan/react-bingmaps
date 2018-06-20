@@ -19,6 +19,22 @@
 	padding: 10px;
 	margin: 5px;
 }
+.map-three{
+	border: 1px solid black;
+	width: 96%;
+	float: left;
+	height: 500px;
+	padding: 10px;
+	margin: 5px;
+}
+div#eleven {
+    width: 70%;
+    float: right;
+}
+.direction-container{
+	max-height: 460px;
+	overflow: auto;
+}
 .customClass{
 	height: 96%;
 }
