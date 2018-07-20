@@ -156,6 +156,9 @@ class App extends Component {
       getLocationHandledData: JSON.stringify(location)
     });
   }
+  GetEventHandled(callbackData){
+    console.log(callbackData);
+  }
   render() {
     return (
       <div>
@@ -195,6 +198,7 @@ class App extends Component {
           <u>Bingmaps with Infobox</u>
             <ReactBingmaps 
               id = "three"
+              center = {[13.0827, 80.2707]}
               className = "customClass"
               bingmapKey = {this.state.bingmapKey} 
               infoboxes = {this.state.infoboxes }
@@ -205,6 +209,7 @@ class App extends Component {
           <u>Bingmaps with Infobox and Pushpin</u>
             <ReactBingmaps 
               id = "four"
+              center = {[13.0827, 80.2707]}
               className = "customClass"
               bingmapKey = {this.state.bingmapKey} 
               infoboxesWithPushPins = {this.state.infoboxesWithPushPins}
@@ -215,6 +220,7 @@ class App extends Component {
           <u>Bingmaps with Regular Polygons</u>
             <ReactBingmaps
               id = "five" 
+              center = {[13.0827, 80.2707]}
               className = "customClass"
               bingmapKey = {this.state.bingmapKey}
               regularPolygons = {this.state.regularPolygons}
@@ -235,6 +241,7 @@ class App extends Component {
             <ReactBingmaps
               className = "customClass"
               id = "six" 
+              center = {[13.0827, 80.2707]}
               bingmapKey = {this.state.bingmapKey}
               boundary = {this.state.boundary}
             > 
@@ -245,6 +252,7 @@ class App extends Component {
             <ReactBingmaps
               id = "seven" 
               className = "customClass"
+              center = {[13.0827, 80.2707]}
               bingmapKey = {this.state.bingmapKey}
               getLocation = {
                 {addHandler: "click", callback:this.GetLocationHandled.bind(this)}
@@ -253,12 +261,18 @@ class App extends Component {
             </ReactBingmaps>
           </div>
           <div className = "map-two">
-          <u>Bingmaps with mapOptions - 'maxZoom': 12, 'minZoom': 5 </u>
+          <u>Bingmaps with EventHandlers - callback data is consoled</u>
             <ReactBingmaps
               className = "customClass"
               id = "eight" 
+              center = {[13.0827, 80.2707]}
               bingmapKey = {this.state.bingmapKey}
-              mapOptions = { {'maxZoom': 12, 'minZoom': 5} }
+              mapHandlers = {
+                [
+                  {addHandler: "click", callback:this.GetEventHandled.bind(this)},
+                  {addHandler: "viewchangeend", callback:this.GetEventHandled.bind(this)}
+                ]
+              }
             > 
             </ReactBingmaps>
           </div>
@@ -267,6 +281,7 @@ class App extends Component {
             <ReactBingmaps
               id = "nine" 
               className = "customClass"
+              center = {[13.0827, 80.2707]}
               bingmapKey = {this.state.bingmapKey}
               polyline = {this.state.polyline}
             > 
@@ -276,6 +291,7 @@ class App extends Component {
             <ReactBingmaps
               className = "customClass"
               id = "ten" 
+              center = {[13.0827, 80.2707]}
               bingmapKey = {this.state.bingmapKey}
               mapOptions = { {'maxZoom': 12, 'minZoom': 5} }
             > 
@@ -286,6 +302,7 @@ class App extends Component {
             <ReactBingmaps
               className = "customClass"
               id = "eleven" 
+              center = {[13.0827, 80.2707]}
               bingmapKey = {this.state.bingmapKey}
               directions = {this.state.directions}
             > 
