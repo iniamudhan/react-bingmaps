@@ -175,6 +175,21 @@ regularPolygons = {
 ```
 Find more **option** values - [PolygonOptions](https://msdn.microsoft.com/en-us/library/mt712648.aspx)
 
+#### irregularPolygons : ArrayOf(objects)
+```jsx
+irregularPolygons = {
+            [
+              {
+                "points": [[13.0827, 80.2707], [14.0827, 81.2707]],
+                "option": { strokeThickness: 2, color: 'red', withPushPin: true }
+              },
+              {
+                ...
+              }
+            ]
+```
+
+
 #### boundary : object
 ```jsx
 //Static array of locations
