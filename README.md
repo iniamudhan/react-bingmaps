@@ -4,7 +4,7 @@ React-Bingmaps is a react.js version of [Bing Maps V8 Web Control](https://msdn.
 
 The main purpose of this version is to help you to write Bingmaps in React applications without any pain. Main principles of React-Bingmaps are:
 1. **Simply** deploy with React components
-1. **Lightweight**  depending on Bing Maps V8 Web Control
+1. **Lightweight**  depending on Bing Maps V8 Web Control. 
 
 ## Features
 * Bingmaps in React.js
